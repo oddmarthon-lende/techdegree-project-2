@@ -57,7 +57,7 @@ const search = {
     $(results).show();
 
     if(typeof callback === 'function')
-      callback(results);
+      callback(results, text);
 
     return this;
   }
