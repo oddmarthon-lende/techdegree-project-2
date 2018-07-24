@@ -558,7 +558,17 @@
       </ul>
       <!-- dynamically add pagination links here -->
 
+
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/pagination.js"></script>
+    <script src="js/search.js"></script>
+    <script>
+
+      pagination.init(".page", 10).new("ul.student-list");
+      search.init(".page-header", "student-search", "Search for students").new("ul.student-list", pagination.new.bind(pagination));
+
+
+    </script>
   </body>
 </html>
-
