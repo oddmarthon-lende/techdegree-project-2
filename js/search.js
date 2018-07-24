@@ -2,6 +2,7 @@ const search = {
 
   _initialized: false,
 
+  // Add search field and button to the page and initializes the search object
   init: function(searchFieldContainer, classNames, placeholder) {
 
     const $div = $(`<div class="${classNames}"></div>`)
@@ -26,6 +27,8 @@ const search = {
     return this;
   },
 
+  // Make children in container searchable
+  // Set an optional callback function to be called when a new search is performed.
   new: function(container, callback) {
 
     if(!this._initialized)
@@ -38,6 +41,7 @@ const search = {
 
   },
 
+  // Searches the text in the elements and shows elements with a match, the rest are hidden.
   find: function(text) {
 
     const elements = this._elements;

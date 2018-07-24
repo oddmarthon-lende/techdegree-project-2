@@ -2,6 +2,7 @@ const pagination = {
 
   _initialized: false,
 
+  // Sets up the pagination links container and initializes the pagination object
   init: function(paginationLinksContainer, elementsPerPage) {
 
     const $div = $('<div class="pagination"></div>');
@@ -26,6 +27,7 @@ const pagination = {
     return this;
   },
 
+  // Paginate children in container
   new: function(container) {
 
     let elements,
@@ -60,6 +62,7 @@ const pagination = {
     return this;
   },
 
+  // Show elements in page number and hide the rest
   page: function(page) {
 
     const elements = this._elements;
